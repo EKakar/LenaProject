@@ -1,0 +1,79 @@
+﻿@model IEnumerable<LenaProject.Models.Forms>
+
+@{
+    ViewBag.Title = "FormList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FormList</h2>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#Modal">
+    Add New Form
+</button>
+<div class="modal" id="Modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    New Form Panel
+                </h2>
+            </div>
+            <div class="modal-body" style="padding:50px">
+                <form method="post" action="/Forms/FormCreate/">
+                    @Html.DisplayNameFor(x => x.FormName)
+                    <input type="text" name="FormName" class="form-control" />
+                    <br />
+                    @Html.DisplayNameFor(x => x.Description)
+                    <input type="text" name="Description" class="form-control" />
+                    <br />
+                    @Html.DisplayNameFor(x => x.Name)
+                    <input type="text" name="Name" class="form-control" required />
+                    <br />
+                    @Html.DisplayNameFor(x => x.Surname)
+                    <input type="text" name="Surname" class="form-control" required />
+                    <br />
+                    @Html.DisplayNameFor(x => x.Age)
+                    <input type="text" name="Age" class="form-control" />
+                    <br />
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FormName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt.Date)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "FormEdit", new { id = item.FormId }) |
+                @Html.ActionLink("Details", "FormDetail", new { id = item.FormId })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LenaProject", "LenaProject.csproj", "{DDDAA9B7-A623-4A58-ABB9-20D55C31932A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDDAA9B7-A623-4A58-ABB9-20D55C31932A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDAA9B7-A623-4A58-ABB9-20D55C31932A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDAA9B7-A623-4A58-ABB9-20D55C31932A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDAA9B7-A623-4A58-ABB9-20D55C31932A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {786A6CD8-050C-4178-9D0C-353278B42DCB}
+	EndGlobalSection
+EndGlobal
